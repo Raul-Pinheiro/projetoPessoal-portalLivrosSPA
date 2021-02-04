@@ -1,26 +1,36 @@
 function fetchData(){
-  let headers= new Headers();
-
-  headers.append('Access-Control-Allow-Origin','http://localhost:5500/')
-  headers.append('Access-Control-Request-Headers','http://localhost:5500/')
-  headers.append('Content-Type', 'application/json')
-
-  fetch("http://127.0.0.1:8000/livros/",{
+  
+  return fetch("http://127.0.0.1:8000/livros/",{
     method:'GET',
-    headers: headers,
-    mode:'no-cors'
-    
-           
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization':'Basic '+ window.btoa('Raul:senha')
+      },          
+               
   })
-  .then(res=>console.log(res))
-  .then(response => console.log(response))
+  .then(resp=>resp.json())
+  .then(livros => 
+    livros.map(livro =>{
+      const tabela = document.querySelector('[data-tabela]');
+      const tbody = document.createElement('tbody');
+      tbody.innerHTML = `
+        <tr>
+          <td>${livro.titulo_livro}</td>
+          <td>${livro.autor_livro}</td>
+          <td>${livro.editora_livro}</td>
+          <td>${livro.valor_livro}</td>
+        </tr>
+      `
+      tabela.appendChild(tbody)
+    })    
+  )
   .catch(err=>console.log(err))
 }
 
 
 fetchData()
  
-
+  
 
 
   
