@@ -1,0 +1,138 @@
+
+// function init(){
+    
+//     window.addEventListener('hashchange',()=>{
+//         container.innerHTML="";
+       
+        
+//         switch(window.location.hash){
+            
+//             case "":
+//                 container.appendChild(home());                
+//                 break;
+                
+//             case "#cadastro":
+//                 container.appendChild(cadastro());                
+//                 break;
+            
+//             case '#edita?id=3':
+//                 container.appendChild(edita());                
+//                 break;
+//             default:
+//                 container.appendChild(home());
+//                 break;
+//         }
+
+//     })
+// }
+
+// window.addEventListener("load",()=>{
+//     container.appendChild(home());
+//     init();
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import inicializaCadastro from "./componentes/cadastro/componente-cadastro";
+import inicializaTabela from "./componentes/listagem/listagem-cliente"
+import incializaFormEdicao from "./componentes/edita/form-edicao"
+
+const rotas = { 
+    "/": inicializaTabela,
+    "/cadastro": inicializaCadastro,
+    "/edita": incializaFormEdicao
+    
+}
+
+const rootDiv = document.querySelector('[data-container]')
+
+
+const navegacao = pathname => { 
+    window.history.pushState({}, pathname, window.location.origin + pathname)
+
+    rootDiv.innerHTML = ""
+    const inicarRota = rotas[window.location.pathname]
+
+    rootDiv.appendChild(inicarRota())
+
+}
+
+window.navegacao = navegacao
+
+window.onpopstate = () =>{ 
+
+rootDiv.innerHTML = ""
+
+rootDiv.appendChild(rotas[window.location.pathname]())
+
+}
+
+
+export { navegacao }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const rotas ={
+//     "/":home,
+//     "/cadastro":cadastro,
+//     "/edita":edita
+// }
+
+
+
+// window.navegacao = navegacao
+
+// window.onpopstate = () =>{ 
+
+// rootDiv.innerHTML = ""
+
+// rootDiv.appendChild(rotas[window.location.pathname]())
+
+// }
+
+
+// navegacao(window.location.pathname)

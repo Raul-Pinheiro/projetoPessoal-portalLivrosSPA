@@ -25,19 +25,6 @@ module.exports = {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
             },
-    //         // {
-    //         //     test: /\.html$/,
-    //         //     use:["html-loader"]
-    //         // },
-    //     //  {
-    //     //      test: /\.jpg$/,
-    //     //      use: {
-    //     //           loader:"file-loader",
-    //     //           options: {
-    //     //               name: "[name].[ext]" 
-    //     //           }
-    //     //       }
-    //     //   }
         ]
     }
 }

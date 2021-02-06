@@ -6,6 +6,8 @@ export default function cadastro(){
     const form = document.createElement('form');
 
     form.innerHTML = `
+
+        <h1 class="h1"> Cadastre um novo livro </h1>
         <div class="form-container">
             <label>
                 Titulo: 

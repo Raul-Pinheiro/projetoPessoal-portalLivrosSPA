@@ -1,18 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
+
 /*Corpo*/
 .body{
     margin:0;
     padding: 0;
  
-    background-color: brown;
+    background-color: rgb(42, 165, 149);
 }
 
 
-.titulo{
+
+
+/*Cabecalhos*/
+
+.cabecalho{
+    width:80%;
+    height: 100px;
+    margin:20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: teal;
+}
+
+.logo-cabecalho, .lista-cabecalh{
+    margin:20px;
+}
+
+.lista-cabecalho{
+    list-style: none;
+}
+.linha-lista-cabecalho{
+    margin:20px;
+}
+
+.logo-cabecalho{
     margin-top: 50px;
     color:rgb(255, 255, 255);
     font-size: 30px;
     text-align: center;
+    font-family: 'Lemonada', cursive;
 }
+
+
+
+
+
+
+
+
+
 /* Formulários*/
 
 .form-container{
@@ -21,7 +58,7 @@
     justify-content: center;
     align-items: center;
     width:80%;
-    background-color: rgba(168, 170, 70, 0.8);
+    background-color: rgba(204, 201, 201,0.7);
     margin:auto;
 }
 
@@ -63,21 +100,20 @@ table{
 
 .th-title{    
     color:rgb(231, 233, 232);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: lighter;
+    font-family: 'Lemonada', cursive;
     text-align: left;
-    padding:5px;
-    text-overflow: ellipsis;
-    
-    
-    
-    
+    padding:2px;
+    text-overflow: ellipsis;  
+          
 }
 
 .td-content{
     color:rgb(39, 36, 36);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: lighter;
+    font-family: 'Lemonada', cursive;
     text-align: left;
     text-overflow: ellipsis;
     padding:8px;
@@ -87,22 +123,28 @@ table{
 }
 
 
+
+
+
+
+
 /* Links e botoes*/
 
 .button-link{
     width:200px;
-    height: 25px;
+    height: 18px;
     background-color: rgb(0, 113, 128);
     padding:8px;
     color: white;
     text-align: right;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     
 }
 
 .button-link:hover{
     background-color: rgb(40, 104, 112);
+    cursor: pointer;
  
 }
 
@@ -124,4 +166,19 @@ table{
     text-decoration: none;
     font-size: 20px;
     color: black;
+}
+.home-link{
+    text-decoration: none;
+    color: white;
+}
+
+
+/*Textos*/
+
+.h1{
+    color:rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+    margin:auto;
+    font-family: 'Lemonada', cursive;
 }
