@@ -1,0 +1,127 @@
+/*Corpo*/
+.body{
+    margin:0;
+    padding: 0;
+ 
+    background-color: brown;
+}
+
+
+.titulo{
+    margin-top: 50px;
+    color:rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+}
+/* Formulários*/
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+    background-color: rgba(168, 170, 70, 0.8);
+    margin:auto;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    
+    
+}
+
+input{
+    width:250px;
+    height:30px;
+    margin:10px;
+}
+
+/*Design Tabela */
+
+table{
+    margin:auto;
+    width:80%;
+    border-collapse:collapse;
+}
+.thead-line{
+    background-color: rgb(22, 22, 22);
+    height: 50px;
+    
+}
+.tbody-line{
+    background-color: rgba(233, 233, 233,0.8); 
+    
+ 
+}
+
+
+.th-title{    
+    color:rgb(231, 233, 232);
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: left;
+    padding:5px;
+    text-overflow: ellipsis;
+    
+    
+    
+    
+}
+
+.td-content{
+    color:rgb(39, 36, 36);
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: left;
+    text-overflow: ellipsis;
+    padding:8px;
+    margin:4px;
+    
+        
+}
+
+
+/* Links e botoes*/
+
+.button-link{
+    width:200px;
+    height: 25px;
+    background-color: rgb(0, 113, 128);
+    padding:8px;
+    color: white;
+    text-align: right;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+.button-link:hover{
+    background-color: rgb(40, 104, 112);
+ 
+}
+
+.btn-tab{     
+    width:150px;
+    color: black;
+    text-align: center;    
+    
+    
+}
+
+.btn-tab:hover{
+    cursor: pointer;
+    background-color:  rgb(0, 113, 128);   
+    
+} 
+
+.link{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
