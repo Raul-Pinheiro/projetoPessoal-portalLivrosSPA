@@ -36,7 +36,7 @@ export default function Home(){
             <td class="td-content">${livro.valor_livro}</td>
                     
             <td class="td-content btn-tab">        
-                  <a class="link" href="/edita?id=${livro.id}">
+                  <a class="link" href="/#edita?id=${livro.id}">
                     Editar        
                   </a>
             </td>
@@ -55,8 +55,6 @@ export default function Home(){
 
   return tabela;
 }
-
-
 
 
 
